@@ -24,7 +24,7 @@ jobs:
           
       - name: Replace Words in README
         run: |
-          sed -i 's/software/HARDWARE/g' README
+          sed -i 's/software/HARDWARE/g' README.md
           git config user.name "GitHub Actions"
           git config user.email "<>"
           git commit -am "Replace 'software' with 'HARDWARE' in README"
