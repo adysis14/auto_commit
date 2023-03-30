@@ -21,3 +21,11 @@ jobs:
           git add file.txt
           git commit -m "Auto-commit: Add new content to file"
           git push
+          
+      - name: Replace Words in README
+        run: |
+          sed -i 's/software/HARDWARE/g' README
+          git config user.name "GitHub Actions"
+          git config user.email "<>"
+          git commit -am "Replace 'software' with 'HARDWARE' in README"
+          git push
